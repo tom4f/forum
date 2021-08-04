@@ -79,7 +79,6 @@ class AddEntry extends Component {
 
     render() {
         let button = '';
-        let formSummmary ='';
         let alert = null;
         alert = this.state.alert === 'ok'
                     ? <h1>Záznam byl přidán !!!</h1>
@@ -115,22 +114,13 @@ class AddEntry extends Component {
                 </div>
                 <input type="submit" name="odesli" defaultValue="Vlož nový příspěvek" />
             </form>;
-            formSummmary = 
-                <h1>
-                    Jmeno :     {this.state.jmeno} <br/>
-                    Email :     {this.state.email} <br/>
-                    Typ :       {this.state.typ} <br/>
-                    Text :      {this.state.text} <br/>
-                    AntispamForm :  {this.state.antispamForm} <br/>
-                </h1>
-                ;
+
 
         } else {
              button = <button className="button" onClick={ this.showForum }>Přidej záznam</button>;
         }
         return (
             <div>
-                {/*formSummmary*/}
                 {button}
                 {alert}
             </div>
